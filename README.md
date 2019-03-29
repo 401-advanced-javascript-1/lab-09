@@ -6,8 +6,8 @@ This lab contains a running server and provides practice for documenting the ser
 - [Github Repo](https://github.com/401-advanced-javascript-1/lab-09)
 
 ## Documentation
-[Jsdocs](localhost:3000/docs)
-[Swagger](https://editor.swagger.io/?_ga=2.173881315.1132580723.1553560602-1879537872.1553560602)
+- [Jsdocs](localhost:3000/docs)
+- [Swagger](https://editor.swagger.io/?_ga=2.173881315.1132580723.1553560602-1879537872.1553560602)
 
 # Modules
 - index.js
