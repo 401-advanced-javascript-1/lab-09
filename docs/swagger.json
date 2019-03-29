@@ -1,0 +1,174 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "Simple-API",
+      "description": "JS401's funnest little API",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000/"
+      }
+    ],
+    "paths": {
+      "/api/v1/:model": {
+        "get": {
+          "description": "Get all categories",
+          "responses": {
+            "200": {
+              "description": "Returned a list of categories",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/getAll"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "description": "Post new object to categories",
+          "parameters": [
+            {
+              "in": "query",
+              "name": "body",
+              "description": "Category object to be added",
+              "required": true,
+              "schema": {
+                "$ref": "#/components/schemas/categoryObject"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Created new data"
+            }
+          }
+        }
+      },
+      "/api/v1/:mode/:id": {
+        "get": {
+          "description": "Find item by id",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "Id of item to return",
+              "required": true,
+              "schema": {
+                "$ref": "#/components/schemas/categoryObject"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Found item by id"
+            }
+          }
+        },
+        "put": {
+          "description": "Update an existing category by id",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "Id of category to update",
+              "required": true,
+              "schema": {
+                "$ref": "#/components/schemas/getOne"
+              }
+            },
+            {
+              "in": "query",
+              "name": "name",
+              "description": "Updated item name",
+              "required": true,
+              "schema": {
+                "$ref": "#/components/schemas/putOne"
+              }
+            },
+            {
+              "in": "query",
+              "name": "display_name",
+              "description": "Updated display name",
+              "required": false,
+              "schema": {
+                "$ref": "#/components/schemas/putOne"
+              }
+            },
+            {
+              "in": "query",
+              "name": "description",
+              "description": "Updated item description",
+              "required": false,
+              "schema": {
+                "$ref": "#/components/schemas/putOne"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Updated item"
+            }
+          }
+        },
+        "delete": {
+          "description": "Removes an existing item",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "description": "Pet id to delete",
+              "schema": {
+                "$ref": "#/components/schemas/deleteOne"
+              }
+            }
+          ],
+          "responses": {
+            "404": {
+              "description": "Item not found"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "getAll": {
+          "type": "object",
+          "example": [
+            [
+              {
+                "category": "string",
+                "name": "string",
+                "display_name": "string",
+                "description": "string"
+              }
+            ]
+          ]
+        },
+        "getOne": {
+          "type": "integer"
+        },
+        "categoryObject": {
+          "type": "object",
+          "example": [
+            {
+              "category": "string",
+              "name": "string",
+              "display_name": "string",
+              "description": "string"
+            }
+          ]
+        },
+        "putOne": {
+          "type": "string"
+        },
+        "deleteOne": {
+          "type": "integer"
+        }
+      }
+    }
+  }
