@@ -38,6 +38,6 @@ This lab contains a running server and provides practice for documenting the ser
 - Testing for expected route endpoints is performed using jest.
 
 ## UML
-- [alt](https://github.com/401-advanced-javascript-1/lab-09/blob/submission/images/uml-get-post.JPG)
-- [alt](https://github.com/401-advanced-javascript-1/lab-09/blob/submission/images/uml-put.JPG)
-- [alt](https://github.com/401-advanced-javascript-1/lab-09/blob/submission/images/uml-delete.JPG)
+- ![alt](https://github.com/401-advanced-javascript-1/lab-09/blob/submission/images/uml-get-post.JPG)
+- ![alt](https://github.com/401-advanced-javascript-1/lab-09/blob/submission/images/uml-put.JPG)
+- ![alt](https://github.com/401-advanced-javascript-1/lab-09/blob/submission/images/uml-delete.JPG)
