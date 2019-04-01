@@ -1,9 +1,10 @@
-# lab-09 JS401 - Lab-09 API-Server
+#JS401 - Lab-09 API-Server
 ## Author: Cory Henderson
 This lab contains a running server and provides practice for documenting the server modules, functions, and classes. Jsdocs and Swagger are used to document functionality and API routes.
 
 ## Links and Resources
 - [Github Repo](https://github.com/401-advanced-javascript-1/lab-09)
+- [Travis](https://www.travis-ci.com/401-advanced-javascript-1/lab-09)
 
 ## Documentation
 - [Jsdocs](localhost:3000/docs)
